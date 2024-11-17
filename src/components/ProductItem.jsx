@@ -9,5 +9,5 @@ function ProductItem({name, price, description}) {
         </div>
     );
 }
-
+ 
 export default ProductItem;
