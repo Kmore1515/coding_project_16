@@ -16,7 +16,7 @@ function ProductList() {
             <ul>
                 {products.map(product => (
                     <ProductItem
-                        key={product.id}
+                        key={product.id} 
                         name={product.name}
                         price={product.price}
                         description={product.description}
@@ -26,4 +26,4 @@ function ProductList() {
         </>
     );
 }
-export default ProductList;
+export default ProductList; 
