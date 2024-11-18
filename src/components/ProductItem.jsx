@@ -3,9 +3,9 @@ import React from 'react';
 function ProductItem({name, price, description}) {
     return (
         <div className="product-item">
-        <h3>{name}</h3>
+        <h3><u>{name}</u></h3>
         <p>{description}</p>
-        <p>{price}</p>
+        <p>${price}</p>
         </div>
     );
 } 

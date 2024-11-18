@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import ProductItem from './ProductItem';
-import ProductList from './ProductList';
+import ProductItem from './ProductItem.jsx';
+import ProductList from './ProductList.jsx';
 
 function AddProductForm({onAddProduct}) {
-    const [name, setName] = useState([]);
-    const [price, setPrice] = useState([]);
-    const [description, setDescription] = useState([]);
+    const [name, setName] = useState('');
+    const [price, setPrice] = useState('');
+    const [description, setDescription] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         alert(`Product ${name} added!`);
+        onAddProduct({ name, price, description});
+        setName('');
+        setPrice('');
+        setDescription('');
     };
 
     return (

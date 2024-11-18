@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import './App.css';
-import ProductList from './components/ProductList';
-import ProductItem from './components/ProductItem';
-import AddProductForm from './components/AddProductForm';
+import ProductList from './components/ProductList.jsx';
+import ProductItem from './components/ProductItem.jsx';
+import AddProductForm from './components/AddProductForm.jsx';
 
-function App() {
+function App() {   
+  const [products, setProducts] =useState([]);
+  const addProduct = (newProduct) => {
+    setProducts((oldProducts) => [...oldProducts, newProduct]); 
+  };
   return (
-     <>
+     <> 
      <ProductList />
      <ProductItem />
-     <AddProductForm />
+     <AddProductForm onAddProduct={addProduct}/>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductItem from './ProductItem';
+import ProductItem from './ProductItem.jsx';
 // Task 1 & 2
 // define a default list of products as an array of objects with id, name, price, and description fields.
 const products = [
