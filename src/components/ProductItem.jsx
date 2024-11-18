@@ -8,6 +8,6 @@ function ProductItem({name, price, description}) {
         <p>{price}</p>
         </div>
     );
-}
+} 
  
 export default ProductItem;
